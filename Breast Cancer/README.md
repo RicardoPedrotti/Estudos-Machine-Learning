@@ -13,7 +13,3 @@ ou artigos que serão utilizados na disciplina;
 * **reports**: aqui é o lugar onde os resultados dos exercícios e projetos serão publicados;
 * **scripts**: diretório que possui todos os scripts utilizados em sala de aula.
 
-## Problemas até o momento discutidos em sala de aula
-
-* Breast cancer: https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
-
