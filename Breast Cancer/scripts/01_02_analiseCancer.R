@@ -6,7 +6,7 @@
 
 dataset <- read.csv("data/breast-cancer-wisconsin.csv")
 dataset$X <- NULL
-dataset$id <- NULL
+dataset$id <- NULL #já tá explicado, né?
 
 library(caret)
 set.seed(1234)
@@ -19,8 +19,8 @@ test <- dataset[-trainIndex,]
 # criando um modelo com arvores de decisao com todos os exemplos
 install.packages("party")
 library(party)
-myFormula <- diagnosis ~ .
-cancer_ctree <- ctree(myFormula, data=train)
+myFormula <- diagnosis ~ . #atribui essa string pro myFormula
+cancer_ctree <- ctree(myFormula, data=train) #
 
 trainPred <- predict(cancer_ctree, newdata = train)
 t <- table(trainPred, train$diagnosis)
@@ -63,6 +63,8 @@ for (i in 10:nrow(train)){
 } 
 result <- result[10:nrow(result), ]
 
+
+#Colocando no Gráfico
 plot(result[,1], type="l", col="red", ylim=c(0,1), 
      xlab="# exemplos", ylab="accr", main="Exemplo de overfit considerando N exemplos")
 lines(result[,2], type="l", col="blue")
@@ -89,6 +91,7 @@ for (i in 2:ncol(train)){
   result[i,] <- c((confusionMatrix(t))$overall[1], (confusionMatrix(t2))$overall[1])
 } 
 
+#Gráficoo
 plot(result[2:ncol(train),1], type="l", col="red", ylim=c(0,1), 
      xlab="# exemplos", ylab="accr", main="Exemplo de overfit considerando N atributos")
 lines(result[2:ncol(train),2], type="l", col="blue")
