@@ -5,6 +5,8 @@ load("../data/20140917_imoveis_completo_tests.rda")
 #Business Understanding: Prever o pre√ßo de um im√≥vel
 #Data Understanding: todos os dados parecem interessante
 
+#atributos do tipo "Factor" s„o CATEG”RICOS
+
 sum(is.na(imoveis$bairro))
 sum(is.na(imoveis$preco))
 sum(is.na(imoveis$area))
