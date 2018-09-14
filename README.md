@@ -1,7 +1,8 @@
-# Estudos Machine Learning
+# Machine Learning Studies
 
-O objetivo desse repositório é guardar o aprendizado e desenvolvimento da disciplina de Machine Learning 
+The objective of this Repo is to store the development and processes of Machine learning algorithms.
 
-## Problemas Estudados
+## Studied Problems:
 * Breast cancer: https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
+* Real Estate: Data aquired from a webcrawler from a apartment renting website.
 
